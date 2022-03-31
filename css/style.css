@@ -108,7 +108,7 @@
 
 @media (max-width: 768px) {
     .atas {
-        margin-top: 65px;
+        margin-top: -15px;
     }
     .svg {
         position: fixed;
