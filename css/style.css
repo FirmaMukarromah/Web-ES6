@@ -1,0 +1,133 @@
+.atas {
+    margin-top: 60px;
+}
+
+.secular {
+    font-family: 'Secular One', sans-serif;
+    font-weight: 400;
+}
+
+.rounded-20 {
+    border-radius: 20px;
+}
+
+
+/* css konfirmasi */
+.bg-konfirm {
+    background-color: #8eb1db;
+}
+
+.konfirm img {
+    width: 80px;
+    height: 58px;
+    margin-top: -8px;
+    margin-bottom: -10px;
+}
+
+.text-konfirm h2 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    color: #c01a19;
+}
+
+.text-konfirm p {
+    font-family: 'Secular One', sans-serif;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #c01a19;
+}
+
+/* css sembuh */
+.bg-sembuh {
+    background-color: #ACD1AF;
+}
+
+.sembuh img {
+    width: 57px;
+    height: 58px;
+    margin-top: -8px;
+    margin-bottom: -10px;
+    margin-left: 20px;
+}
+
+.text-sembuh h2 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    color: #81476e;
+}
+
+.text-sembuh p {
+    font-family: 'Secular One', sans-serif;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #81476e;
+}
+
+/* css mati */
+.bg-mati {
+    background-color: #F47174;
+}
+
+.mati img {
+    width: 58px;
+    height: 67px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+.text-mati h2 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-bottom: 0px;
+    color: #fafafa;
+}
+
+.text-mati p {
+    font-family: 'Secular One', sans-serif;
+    font-size: 15px;
+    margin-left: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #fafafa;
+}
+
+.svg {
+    position: inherit;
+    margin-top: -76px;
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .atas {
+        margin-top: 65px;
+    }
+    .svg {
+        position: fixed;
+        bottom: 0;
+    }
+    .mobile {
+        justify-content: center!important;
+        margin-right: 36px;
+    }
+
+    .sembuh img {
+        margin-left: 10px;
+    }
+    .konfirm img {
+        margin-left: 67px;
+        margin-right: 15px;
+    }
+
+    .text-konfirm {
+        margin-left: -24px;
+    }
+}
