@@ -1,0 +1,87 @@
+<head><script defer src="js/bundle.js"></script></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module build failed (from ./node_modules/html-loader/dist/cjs.js):
+  ValidationError: Invalid options object. HTML Loader has been initialized using an options object that does not match the API schema.
+   - options has an unknown property 'attrs'. These properties are valid:
+     object { preprocessor?, sources?, minimize?, esModule? }
+      at validate (/mnt/d/kerja/Web-ES6/node_modules/schema-utils/dist/validate.js:105:11)
+      at Object.getOptions (/mnt/d/kerja/Web-ES6/node_modules/webpack/lib/NormalModule.js:585:19)
+      at Object.loader (/mnt/d/kerja/Web-ES6/node_modules/html-loader/dist/index.js:23:27)
+  ModuleBuildError: Module build failed (from ./node_modules/html-loader/dist/cjs.js):
+  ValidationError: Invalid options object. HTML Loader has been initialized using an options object that does not match the API schema.
+   - options has an unknown property 'attrs'. These properties are valid:
+     object { preprocessor?, sources?, minimize?, esModule? }
+      at validate (/mnt/d/kerja/Web-ES6/node_modules/schema-utils/dist/validate.js:105:11)
+      at Object.getOptions (/mnt/d/kerja/Web-ES6/node_modules/webpack/lib/NormalModule.js:585:19)
+      at Object.loader (/mnt/d/kerja/Web-ES6/node_modules/html-loader/dist/index.js:23:27)
+      at processResult (/mnt/d/kerja/Web-ES6/node_modules/webpack/lib/NormalModule.js:758:19)
+      at /mnt/d/kerja/Web-ES6/node_modules/webpack/lib/NormalModule.js:860:5
+      at /mnt/d/kerja/Web-ES6/node_modules/loader-runner/lib/LoaderRunner.js:399:11
+      at /mnt/d/kerja/Web-ES6/node_modules/loader-runner/lib/LoaderRunner.js:251:18
+  
+  - validate.js:105 validate
+    [Web-ES6]/[schema-utils]/dist/validate.js:105:11
+  
+  - NormalModule.js:585 Object.getOptions
+    [Web-ES6]/[webpack]/lib/NormalModule.js:585:19
+  
+  - index.js:23 Object.loader
+    [Web-ES6]/[html-loader]/dist/index.js:23:27
+  
+  - ModuleBuildError: Module build failed (from ./node_modules/html-loader/dist/cjs.js):
+  
+  - ValidationError: Invalid options object. HTML Loader has been initialized using an options object that does not match the API schema.
+  
+  - - options has an unknown property 'attrs'. These properties are valid:
+  
+  - object { preprocessor?, sources?, minimize?, esModule? }
+  
+  - validate.js:105 validate
+    [Web-ES6]/[schema-utils]/dist/validate.js:105:11
+  
+  - NormalModule.js:585 Object.getOptions
+    [Web-ES6]/[webpack]/lib/NormalModule.js:585:19
+  
+  - index.js:23 Object.loader
+    [Web-ES6]/[html-loader]/dist/index.js:23:27
+  
+  - NormalModule.js:758 processResult
+    [Web-ES6]/[webpack]/lib/NormalModule.js:758:19
+  
+  - NormalModule.js:860 
+    [Web-ES6]/[webpack]/lib/NormalModule.js:860:5
+  
+  - LoaderRunner.js:399 
+    [Web-ES6]/[loader-runner]/lib/LoaderRunner.js:399:11
+  
+  - LoaderRunner.js:251 
+    [Web-ES6]/[loader-runner]/lib/LoaderRunner.js:251:18
+  
+  - child-compiler.js:169 
+    [Web-ES6]/[html-webpack-plugin]/lib/child-compiler.js:169:18
+  
+  - Compiler.js:551 finalCallback
+    [Web-ES6]/[webpack]/lib/Compiler.js:551:5
+  
+  - Compiler.js:577 
+    [Web-ES6]/[webpack]/lib/Compiler.js:577:11
+  
+  - Compiler.js:1196 
+    [Web-ES6]/[webpack]/lib/Compiler.js:1196:17
+  
+  
+  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
+    [Web-ES6]/[tapable]/lib/Hook.js:18:14
+  
+  - Compiler.js:1192 
+    [Web-ES6]/[webpack]/lib/Compiler.js:1192:33
+  
+  - Compilation.js:2787 finalCallback
+    [Web-ES6]/[webpack]/lib/Compilation.js:2787:11
+  
+  - Compilation.js:3092 
+    [Web-ES6]/[webpack]/lib/Compilation.js:3092:11
+  
+  
+</pre>

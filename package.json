@@ -2,22 +2,38 @@
   "name": "webpack_covid_19_api",
   "version": "1.0.0",
   "description": "api covid 19 dengan menggunakan webpack ",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
-    "start": "npm run build && npm run dev",
-    "dev" : "concurrently \"http-server -a localhost -p 8080\" \"open http://localhost:8080\"",
-    "build" : "concurrently \"http-server -a localhost -p 8080\" \"open http://localhost:8080\"",
-    "serve" : "concurrently \"http-server -a localhost -p 8080\" \"open http://localhost:8080\""
+    "start": "webpack-dev-server --mode development --open",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "serve": "concurrently \"http-server -a localhost -p 8080\" \"open http://localhost:8080\""
   },
   "author": "Firma Mkh",
   "license": "ISC",
   "dependencies": {
+    "@babel/runtime": "^7.17.8",
     "boostrap": "^2.0.0",
     "bootstrap": "^5.1.3",
+    "core-js": "^3.21.1",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.1.0",
     "jquery": "^3.5.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.4",
     "concurrently": "^7.0.0",
-    "http-server": "^14.1.0"
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.49.11",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.71.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.0"
   }
 }
