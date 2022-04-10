@@ -1,16 +1,31 @@
-import "../scss/style.scss";
-$(document).ready(function () {
-    var url = "https://covid19.mathdro.id/api";
-    $.get(url, function (data) {
+import '../scss/style.scss';
+import $ from 'jquery';
+import Loading from './LoadingComponent';
+const numberWithCommas = (x) => x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-        // deklarasi variabeel data
-        var konfirmasi = $.number(data['confirmed']['value']);
-        var sembuh = $.number(data['recovered']['value']);
-        var mati = $.number(data['deaths']['value']);
+const loading = new Loading();
+// $(window).on('load', () => {
+//     $('body').append(loading); 
+// });
 
-        console.log(data['confirmed']['value']);
-        $('#data-konfirm').text(konfirmasi);
-        $('#data-sembuh').text(sembuh);
-        $('#data-mati').text(mati);
+$(document).ready(async () => {
+    // $('loading-component').remove();
+    let url = "https://covid19.mathdro.id/api";
+    await $.get(url, function (data) {
+        $('#data-konfirm').text(data.confirmed.value);
+        $('#data-sembuh').text(data.recovered.value);
+        $('#data-mati').text(data.deaths.value);
+    });
+
+    $('.count').each(function () {
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        }, {
+            duration: 5000,
+            easing: 'swing',
+            step: function (now) {
+                $(this).text(Math.ceil(now));
+            }
+        });
     });
 });

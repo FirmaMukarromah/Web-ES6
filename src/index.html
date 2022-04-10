@@ -6,21 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API covid Responsive layout with ajax jquery</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="scss/style.scss">
 
     <!-- this font by google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
 
-    <script src="./js/jquery.js"></script>
-    <script src="./js/number.js"></script>
-    <script src="./js/bootstrap.js"></script>
-
 </head>
 
 <body>
+    
     <div class="container atas">
         <div class="row justify-content-center">
             <div class="col-md-5">
@@ -32,47 +28,53 @@
                 </h1>
                 <div class="row mt-2">
                     <div class="col-md-6">
-                        <div class="card rounded-20 p-3 shadow-sm mt-3 bg-konfirm">
-                            <div class="d-flex mobile">
-                                <div class="konfirm">
-                                    <img src="img/sakit.png" alt="" class="img-fluid">
-                                </div>
-                                <div class="text-konfirm">
-                                    <h2>Terkonfirmasi</h2>
-                                    <p id="data-konfirm">123445</p>
+                        <my-component>
+                            <div class="card rounded-20 p-3 shadow-sm mt-3 bg-konfirm">
+                                <div class="d-flex mobile">
+                                    <div slot="emoticon" class="konfirm">
+                                        <img src="img/sakit.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div slot="content" class="text-konfirm">
+                                        <h2>Terkonfirmasi</h2>
+                                        <p id="data-konfirm" class="count"></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </my-component>
                     </div>
 
                     <!-- Sakit -->
                     <div class="col-md-6">
-                        <div class="card rounded-20 p-3 shadow-sm mt-3 bg-sembuh">
-                            <div class="d-flex mobile">
-                                <div class="sembuh">
-                                    <img src="img/smile.png" alt="" class="img-fluid">
-                                </div>
-                                <div class="text-sembuh">
-                                    <h2>Sembuh</h2>
-                                    <p id="data-sembuh">123445</p>
+                        <my-component>
+                            <div class="card rounded-20 p-3 shadow-sm mt-3 bg-sembuh">
+                                <div class="d-flex mobile">
+                                    <div slot="emoticon" class="sembuh">
+                                        <img src="img/smile.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div slot="content" class="text-sembuh">
+                                        <h2>Sembuh</h2>
+                                        <p id="data-sembuh" class="count"></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </my-component>
                     </div>
 
                     <!-- Meninggal -->
                     <div class="col-md-12">
-                        <div class="card rounded-20 p-3 shadow-sm bg-mati mt-3">
-                            <div class="d-flex justify-content-center">
-                                <div class="mati">
-                                    <img src="img/mati.png" alt="" class="img-fluid">
-                                </div>
-                                <div class="text-mati">
-                                    <h2>Meninggal</h2>
-                                    <p id="data-mati">123445</p>
+                        <my-component>
+                            <div class="card rounded-20 p-3 shadow-sm bg-mati mt-3">
+                                <div class="d-flex justify-content-center">
+                                    <div slot="emoticon" class="mati">
+                                        <img src="img/mati.png" alt="" class="img-fluid">
+                                    </div>
+                                    <div slot="content" class="text-mati">
+                                        <h2>Meninggal</h2>
+                                        <p id="data-mati" class="count"></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </my-component>
                     </div>
                 </div>
             </div>

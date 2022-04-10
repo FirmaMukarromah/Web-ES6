@@ -2,14 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/js/index.js',
+    entry: {
+        index: './src/js/index.js',
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/bundle.js',
-        publicPath: 'http://cdn.example.com/[fullhash]/'
-    },
-    devServer: {
-        contentBase: './dist'
+        filename: 'js/[name].bundle.js',
+        publicPath: '/dist/',
+        clean: true,
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -38,27 +38,13 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(jpe?g|png|gif|svg|ico)$/i,
-                use: [{
-                    loader: 'file-loader',
-                    options: {
-                        name: '[name].[ext]',
-                        outputPath: 'images/'
-                    }
-                }]
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
             },
             {
-                test: /\.(html)$/,
-                use: {
-                    loader: 'html-loader',
-                    options: {
-                        attrs: ['img:src', 'link:href']
-                    }
-                }
-            }
+                test: /\.html$/i,
+                loader: "html-loader",
+            },
         ]
-    },
-    resolve: {
-        extensions: ['*', '.js', '.jsx']
-    },
+    }
 }
